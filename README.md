@@ -54,8 +54,7 @@ Your expenses will be listed in order with their total calculated at the bottom.
 ## ⚙️ Code Example
 Here is a small snippet of how the expenses are added and validated using JavaScript:
 
-javascript
-Copy code
+```javascript
 // Add Expense Function
 function addExpense() {
     const description = document.getElementById('expenseDescription').value;
@@ -80,6 +79,7 @@ function addExpense() {
     displayExpenses();
     showMessage("Expense added successfully!", "success");
 }
+```
 ## 📸 Screenshots
 Here are a few screenshots of the app in action:
 
