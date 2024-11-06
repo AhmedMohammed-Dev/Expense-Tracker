@@ -1,14 +1,10 @@
-# Expense Tracker System
-
-A simple, user-friendly Expense Tracker application built using HTML, CSS, and JavaScript. This project helps you keep track of your daily expenses, add new entries, and view your spending summary in a clear and organized manner.
-
-<h1 style="font-size: 50px; text-align: center;">**Expense Tracker System**</h1>
+<h1 style="font-size: 50px; text-align: center;">Expense Tracker System</h1>
 
 A simple, user-friendly **Expense Tracker** application built using **HTML**, **CSS**, and **JavaScript**. This project helps you keep track of your daily expenses, add new entries, and view your spending summary in a clear and organized manner.
 
 ## 📝 **Overview**
 
-The Expense Tracker allows users to:
+The **Expense Tracker** allows users to:
 - **Add descriptions, amounts, and dates** for their expenses.
 - **View a list of all recorded expenses**.
 - Automatically calculate the **total spending**.
