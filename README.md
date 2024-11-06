@@ -84,11 +84,6 @@ function addExpense() {
 Here are a few screenshots of the app in action:
 
 
-## 🎯 Future Enhancements
-Categories for Expenses: Allow users to categorize their expenses (e.g., Food, Transport, Entertainment).
-Expense Graphs: Provide visual representations of expenses using charts and graphs.
-Export Data: Ability to export expense data to CSV or Excel format.
-Authentication: User authentication to securely store and manage expenses.
 ## 💬 Contributing
 Contributions are welcome! Feel free to fork the repository, make changes, and submit pull requests. Here are a few ways you can contribute:
 
