@@ -34,7 +34,7 @@ Clone this repository to your local machine using:
 
 bash
 Copy code
-git clone https://github.com/YourUsername/Expense-Tracker.git
+git clone [https://github.com/YourUsername/Expense-Tracker.git](https://github.com/AhmedMohammed-Dev/Expense-Tracker)
 Navigate to the project directory:
 
 bash
