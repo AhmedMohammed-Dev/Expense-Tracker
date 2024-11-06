@@ -32,15 +32,21 @@ A modern web browser (e.g., Chrome, Firefox, Edge).
 Steps to Run the Project
 Clone this repository to your local machine using:
 
-bash
-Copy code
-git clone https://github.com/AhmedMohammed-Dev/Expense-Tracker
+    ```bash
+    git clone https://github.com/YourUsername/Expense-Tracker.git
+    ```
 Navigate to the project directory:
 
-bash
-Copy code
-cd Expense-Tracker
-Open index.html in your web browser.
+    ```bash
+    cd Expense-Tracker
+    ```
+
+Open `index.html` in your web browser.
+
+**Add a Description**: Enter a short description of your expense (e.g., "Lunch", "Taxi", etc.).
+2. **Enter the Amount**: Add the amount of the expense in numerical form.
+3. **Pick a Date**: Select the date of the expense from the date picker.
+4. Click the **"Add Expense"** button to save your expense.
 
 Start adding your expenses!
 
