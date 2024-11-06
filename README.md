@@ -28,8 +28,8 @@ LocalStorage: To store expenses persistently across page reloads.
 Prerequisites
 To run this project locally, you will need the following:
 
-A modern web browser (e.g., Chrome, Firefox, Edge).
-Steps to Run the Project
+A modern web browser (e.g., **Chrome**, **Firefox**, **Edge**).
+### **Steps to Run the Project**
 Clone this repository to your local machine using:
 
     ```bash
@@ -43,21 +43,17 @@ Navigate to the project directory:
 
 Open `index.html` in your web browser.
 
+
+Start adding your expenses!
+
+## 🔍 **Usage**
 **Add a Description**: Enter a short description of your expense (e.g., "Lunch", "Taxi", etc.).
 2. **Enter the Amount**: Add the amount of the expense in numerical form.
 3. **Pick a Date**: Select the date of the expense from the date picker.
 4. Click the **"Add Expense"** button to save your expense.
-
-Start adding your expenses!
-
-## 🔍 Usage
-Add a Description: Enter a short description of your expense (e.g., "Lunch", "Taxi", etc.).
-Enter the Amount: Add the amount of the expense in numerical form.
-Pick a Date: Select the date of the expense from the date picker.
-Click the "Add Expense" button to save your expense.
 Your expenses will be listed in order with their total calculated at the bottom.
 
-## ⚙️ Code Example
+## ⚙️ **Code Example**
 Here is a small snippet of how the expenses are added and validated using JavaScript:
 
 ```javascript
