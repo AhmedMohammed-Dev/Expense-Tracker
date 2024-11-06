@@ -8,7 +8,7 @@ A simple, user-friendly **Expense Tracker** application built using **HTML**, **
 
 ## 📝 **Overview**
 
-The **Expense Tracker** allows users to:
+The Expense Tracker allows users to:
 - **Add descriptions, amounts, and dates** for their expenses.
 - **View a list of all recorded expenses**.
 - Automatically calculate the **total spending**.
