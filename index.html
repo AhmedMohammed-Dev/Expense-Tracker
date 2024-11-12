@@ -1,1 +1,42 @@
 
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تتبع النفقات</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>برنامج تتبع النفقات</h1>
+
+        <!-- نموذج إضافة النفقة -->
+        <div class="expense-form">
+            <input type="text" id="expenseDescription" placeholder="وصف النفقة" required>
+            <input type="number" id="expenseAmount" placeholder="المبلغ" required>
+            <input type="date" id="expenseDate" required>
+            <button onclick="addExpense()">إضافة النفقة</button>
+        </div>
+
+        <!-- قائمة النفقات -->
+        <div class="expenses-list">
+            <h2>النفقات:</h2>
+            <ul id="expenseList">
+                <!-- سيتم إضافة النفقات هنا -->
+            </ul>
+        </div>
+
+        <!-- إجمالي النفقات -->
+        <div class="total-expenses">
+            <h2>إجمالي النفقات: <span id="totalAmount">0</span> جنيه</h2>
+        </div>
+
+        <!-- رسالة التأكيد أو الخطأ -->
+        <div id="message" class="message hidden"></div>
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
