@@ -66,30 +66,44 @@ Your expenses will be listed in order with their total calculated at the bottom.
 Here is a small snippet of how the expenses are added and validated using **JavaScript**:
 
 ```javascript
-// Add Expense Function
 function addExpense() {
     const description = document.getElementById('expenseDescription').value;
     const amount = parseFloat(document.getElementById('expenseAmount').value);
     const date = document.getElementById('expenseDate').value;
+    const category = document.getElementById('expenseCategory').value;
 
-    // Validate the input fields
-    if (!description || !amount || !date) {
-        showMessage("Please fill in all fields.", "error");
-        return;
+    // Hide the error message if it exists
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.style.display = 'none';
+
+    // Check if the required data is provided
+    if (amount && date && category && (category !== 'Other' || description)) {
+        const expense = { description, amount, date, category };
+
+        // Add the expense to the array
+        expenses.push(expense);
+
+        // Update the display
+        displayExpenses();
+
+        // Clear the fields after adding the expense
+        document.getElementById('expenseDescription').value = '';
+        document.getElementById('expenseAmount').value = '';
+        document.getElementById('expenseDate').value = '';
+        document.getElementById('expenseCategory').value = '';
+    } else {
+        let errorText = "Please fill in all the required fields.";
+
+        // If the category is "Other", the description must be filled in
+        if (category === "Other" && !description) {
+            errorText = "Please enter a description when the category is 'Other'.";
+        }
+
+        // Display the error message on the site
+        showError(errorText);
     }
-
-    if (amount <= 0) {
-        showMessage("Amount must be greater than zero.", "error");
-        return;
-    }
-
-    // If valid, add expense to the list and save it in localStorage
-    const expense = { description, amount, date };
-    expenses.push(expense);
-    localStorage.setItem("expenses", JSON.stringify(expenses));
-    displayExpenses();
-    showMessage("Expense added successfully!", "success");
 }
+
 ```
 ## 📸 Screenshots
 Here are a few screenshots of the app in action:
