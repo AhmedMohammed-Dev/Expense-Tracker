@@ -14,12 +14,12 @@
         <h1>برنامج تتبع النفقات</h1>
         
         <div class="form-and-chart">
-            <!-- الرسم البياني أولاً (الجانب الأيسر) -->
+            <!-- Expected graph (left side)-->
             <div class="chart-container">
                 <canvas id="expensesChart"></canvas>
             </div>
 
-            <!-- نموذج إضافة النفقة (الجانب الأيمن) -->
+            <!-- Add Expense Form (Right Side) -->
             <div class="expense-form">
                 <label for="expenseDescription">وصف النفقة</label>
                 <input type="text" id="expenseDescription" placeholder="وصف النفقة (اختياري)" >
@@ -43,7 +43,7 @@
             </div>
         </div>
 
-        <!-- تتبع النفقات حسب التواريخ -->
+        <!-- Track expenses by dates -->
         <div class="date-filter">
             <label for="startDate">من:</label>
             <input type="text" id="startDate" class="flatpickr" onchange="filterByDate()">
@@ -52,10 +52,10 @@
             <input type="text" id="endDate" class="flatpickr" onchange="filterByDate()">
         </div>
 
-        <!-- رسالة الخطأ -->
+        <!-- Error message -->
         <div id="errorMessage" class="error-message"></div>
 
-        <!-- قائمة النفقات -->
+        <!-- Expense list-->
         <div class="expenses-list">
             <h2>النفقات:</h2>
             <ul id="expenseList">
