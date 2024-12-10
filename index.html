@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar">
 <head>
@@ -6,18 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>تتبع النفقات</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </head>
 <body>
     <div class="container">
         <h1>برنامج تتبع النفقات</h1>
+        
+        <div class="form-and-chart">
+            <!-- الرسم البياني أولاً (الجانب الأيسر) -->
+            <div class="chart-container">
+                <canvas id="expensesChart"></canvas>
+            </div>
 
-        <!-- نموذج إضافة النفقة -->
-        <div class="expense-form">
-            <input type="text" id="expenseDescription" placeholder="وصف النفقة" required>
-            <input type="number" id="expenseAmount" placeholder="المبلغ" required>
-            <input type="date" id="expenseDate" required>
-            <button onclick="addExpense()">إضافة النفقة</button>
+            <!-- نموذج إضافة النفقة (الجانب الأيمن) -->
+            <div class="expense-form">
+                <label for="expenseDescription">وصف النفقة</label>
+                <input type="text" id="expenseDescription" placeholder="وصف النفقة (اختياري)" >
+
+                <label for="expenseAmount">المبلغ</label>
+                <input type="number" id="expenseAmount" placeholder="المبلغ" required>
+
+                <label for="expenseDate">التاريخ</label>
+                <input type="date" id="expenseDate" required>
+
+                <label for="expenseCategory">الصنف</label>
+                <select id="expenseCategory" required onchange="toggleDescriptionField()">
+                    <option value="" disabled selected>اختر الصنف</option>
+                    <option value="طعام">طعام</option>
+                    <option value="مواصلات">مواصلات</option>
+                    <option value="ترفيه">ترفيه</option>
+                    <option value="أخرى">أخرى</option>
+                </select>
+
+                <button onclick="addExpense()">إضافة النفقة</button>
+            </div>
         </div>
+
+        <!-- تتبع النفقات حسب التواريخ -->
+        <div class="date-filter">
+            <label for="startDate">من:</label>
+            <input type="text" id="startDate" class="flatpickr" onchange="filterByDate()">
+
+            <label for="endDate">إلى:</label>
+            <input type="text" id="endDate" class="flatpickr" onchange="filterByDate()">
+        </div>
+
+        <!-- رسالة الخطأ -->
+        <div id="errorMessage" class="error-message"></div>
 
         <!-- قائمة النفقات -->
         <div class="expenses-list">
@@ -31,11 +67,7 @@
         <div class="total-expenses">
             <h2>إجمالي النفقات: <span id="totalAmount">0</span> جنيه</h2>
         </div>
-
-        <!-- رسالة التأكيد أو الخطأ -->
-        <div id="message" class="message hidden"></div>
     </div>
-    
 
     <script src="script.js"></script>
 </body>
