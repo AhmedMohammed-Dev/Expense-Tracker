@@ -1,77 +1,81 @@
-
-* {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    min-height: 100vh;
 }
 
 .container {
     width: 90%;
-    max-width: 800px;
-    padding: 30px;
-    background-color: #ffffff;
-    border-radius: 12px;
+    max-width: 1200px; /* زيادة العرض الإجمالي لتناسب المساحة */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
 }
-
-
 
 h1 {
-    color: #2c3e50;
-    margin-bottom: 20px;
-    font-size: 30px;
+    text-align: center;
+    color: #333;
 }
 
-.expense-form {
-    display: grid;
-    gap: 15px;
+.form-and-chart {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;  /* المسافة بين النموذج والرسم البياني */
     margin-bottom: 30px;
 }
 
-.expense-form input {
-    padding: 12px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    transition: border-color 0.3s ease;
+.expense-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
-.expense-form input:focus {
-    border-color: #3498db;
-    outline: none;
+.expense-form input, .expense-form select {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .expense-form button {
-    padding: 12px 20px;
-    font-size: 18px;
-    background-color: #3498db;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 }
 
 .expense-form button:hover {
-    background-color: #2980b9;
-    transform: translateY(-3px);
+    background-color: #218838;
 }
 
-.expenses-list {
-    margin-bottom: 20px;
-    text-align: left;
+.chart-container {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.date-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.date-filter input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .expenses-list ul {
@@ -80,81 +84,35 @@ h1 {
 }
 
 .expenses-list li {
-    background-color: #ecf0f1;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.expenses-list li button {
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 6px 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
-}
-
-.expenses-list li button:hover {
-    background-color: #c0392b;
-    transform: translateY(-2px);
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
 }
 
 .total-expenses {
-    font-size: 20px;
-    font-weight: bold;
-    color: #2c3e50;
-    margin-top: 30px;
-}
-
-.total-expenses span {
-    color: #3498db;
-}
-
-/* تصميم الرسالة */
-.message {
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 6px;
-    font-size: 16px;
-    display: none;
     text-align: center;
+    margin-top: 20px;
 }
 
-.message.success {
-    background-color: #28a745;
-    color: white;
-}
-
-.message.error {
-    background-color: #dc3545;
-    color: white;
-}
-
-.message.hidden {
+.error-message {
     display: none;
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: 1px solid #f5c6cb;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
 }
 
-@media (max-width: 768px) {
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    .expense-form input,
-    .expense-form button {
-        font-size: 14px;
-    }
-
-    .total-expenses {
-        font-size: 18px;
-    }
+.flatpickr {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
 }
