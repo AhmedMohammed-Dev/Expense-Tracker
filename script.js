@@ -107,6 +107,7 @@ function filterByDate() {
 function displayFilteredExpenses(filteredExpenses) {
     const expenseList = document.getElementById('expenseList');
     const totalAmount = document.getElementById('totalAmount');
+//         Ahmed Mohammed Mohammed 
 
     expenseList.innerHTML = '';
     let total = 0;
