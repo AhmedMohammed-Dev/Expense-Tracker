@@ -39,7 +39,7 @@ To run this project locally, you will need the following:
 1. Clone this repository to your local machine using:
    bash
     ```
-    git clone https://github.com/YourUsername/Expense-Tracker.git
+    git clone https://github.com/AhmedMohammed-Dev/Expense-Tracker.git
     ```
 
 3. Navigate to the project directory:
