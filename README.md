@@ -107,6 +107,8 @@ function addExpense() {
 ```
 ## 📸 Screenshots
 Here are a few screenshots of the app in action:
+![image](https://github.com/user-attachments/assets/cf42f44a-e5c6-49b7-83f4-f63e2891d845)
+
 
 
 ## 💬 Contributing
